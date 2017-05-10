@@ -1,0 +1,74 @@
+################################################################################
+# Physically-based Light Sheet Fluoresecnce Microscopy Simulation 
+# Thesis Title: In Silico Brain Imaging
+# (C) Marwan Abdellah <MARWAN.ABDELLAH@EPFL.CH> (2014 - 2017)
+# (C) Blue Brain Project (BBP) / École polytechnique fédérale de Lausanne (EPFL) 
+################################################################################
+
+# @Frustum #####################################################################
+# For further detais, look at gluLookAt()
+# [ eyeX eyeY eyeZ ]  [ pX pY pZ ]  [ normX normY normZ ]
+LookAt X_CAMERA 0.0 Z_CAMERA  0.0 0.0 0.0  0.0 1.0 0.0 
+
+# @Camera ######################################################################
+Camera "telecentric"
+    "float screenwindow" [X_MIN_SCREEN X_MAX_SCREEN Y_MIN_SCREEN Y_MAX_SCREEN]
+    "float focaldistance" [FOCAL_DISTANCE]
+    "float lensradius" [LENS_RADIUS]
+    
+Film "image"
+    "integer xresolution" [500]
+    "integer yresolution" [500]
+    "string filename" ["lsfm-full-column"]
+    "bool writeaveragefilmspectrum" "true"
+
+# @Film ########################################################################
+# Resolutions: [X0 / Y0][X1 / Y1][X2 / Y2][X3 / Y3][X4 / Y4]
+Film "image"
+    "integer xresolution" [X_RESOLUTION]
+    "integer yresolution" [Y_RESOLUTION]
+    "string filename" "IMAGE_NAME"
+
+# @Renderer ####################################################################
+Renderer "sampler"
+
+# @Sampler #####################################################################
+Sampler "lowdiscrepancy"
+    "integer pixelsamples" [SPP]
+    
+# @Volume Integrator ###########################################################
+VolumeIntegrator "singlefluorescence"
+    "float stepsize" [STEP_SIZE]
+
+# World
+WorldBegin
+
+    # @Brightfield Collimated Illumination #####################################
+    AttributeBegin
+        AreaLightSource "collimated"
+            "string units" "radiance"
+            "spectrum photons" "LASER_BEAM"
+                        
+        Translate 0.0 Y_LIGHT_OFFSET 0.0
+        Rotate 90.0 0 1 0
+        Shape "rectangle"
+            "float x" [X_LIGHT_SIZE]
+            "float y" [Y_LIGHT_SIZE]
+    AttributeEnd
+
+    # @Binary Volume Grid ######################################################
+    AttributeBegin
+        Volume "fluorescentbinarygrid"
+            "point p0" [P0_X P0_Y P0_Z]
+            "point p1" [P1_X P1_Y P1_Z]
+            "string prefix" "VOLUME_PREFIX"
+            "spectrum fex" "EXCITATION_SPECTRUM"
+            "spectrum fem" "EMISSION_SPECTRUM"
+            "float epsilon" [EPSILON]
+            "float c" [CONCENTRATION]
+            "float yield" [QUANUM_YIELD]
+            "float gf" [GF]
+    AttributeEnd
+
+# World
+WorldEnd
