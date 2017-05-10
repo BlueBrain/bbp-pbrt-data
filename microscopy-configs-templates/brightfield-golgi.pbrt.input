@@ -1,7 +1,7 @@
 ################################################################################
 # Physically-based Brightfield Microscope Simulation 
 # Thesis Title: In Silico Brain Imaging
-# (C) Marwan Abdellah <MARWAN.ABDELLAH@EPFL.CH> (2017)
+# (C) Marwan Abdellah <MARWAN.ABDELLAH@EPFL.CH> (2014 - 2017)
 # (C) Blue Brain Project (BBP) / École polytechnique fédérale de Lausanne (EPFL) 
 ################################################################################
 
@@ -37,7 +37,7 @@ WorldBegin
     # @Brightfield Collimated Illumination #####################################
     AttributeBegin
         AreaLightSource "collimated"
-            "spectrum photons" "LAMP"
+            "spectrum photons" "LAMP_SPECTRUM"
             
         Translate X_LIGHT_OFFSET 0.0 Z_LIGHT_OFFSET
         Rotate 90.0 0 1 0
