@@ -43,7 +43,7 @@ VolumeIntegrator "singlefluorescence"
 # World
 WorldBegin
 
-    # @Brightfield Collimated Illumination #####################################
+    # @LSFM Collimated Illumination ############################################
     AttributeBegin
         AreaLightSource "collimated"
             "string units" "radiance"
