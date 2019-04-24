@@ -37,7 +37,7 @@ WorldBegin
     # @Brightfield Collimated Illumination #####################################
     AttributeBegin
         AreaLightSource "collimated"
-            "spectrum photons" "/data/bbp-pbrt-data/lamps-spectra/xenon-lamp.spd"
+            "rgb photons" [10 10 10]
             
         Translate X_LIGHT_OFFSET 0.0 Z_LIGHT_OFFSET
         Rotate Y_LIGHT_ROTATION 0 1 0
