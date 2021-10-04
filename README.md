@@ -4,7 +4,7 @@ Data files and pbrt configuration files for the Blue Brain Project forks of pbrt
 
 # Attributions 
 
-* The original spectra were available for free from the [SpectraViewer portal](https://www.thermofisher.com/order/fluorescence-spectraviewer?ef_id=CjwKCAjwzOqKBhAWEiwArQGwaBb4KLS0-YxQRm5JSm7gn2EFWjisAtmFe8FniHkVYmyUJkXVVrPtiRoCJ_EQAvD_BwE:G:s&s_kwcid=AL!3652!3!546509333983!e!!g!!spectraviewer&cid=bid_pca_aup_r01_co_cp1359_pjt0000_bid00000_0se_gaw_bt_pur_con&gclid=CjwKCAjwzOqKBhAWEiwArQGwaBb4KLS0-YxQRm5JSm7gn2EFWjisAtmFe8FniHkVYmyUJkXVVrPtiRoCJ_EQAvD_BwE#!/) from [ThermoFisher Scientific] (https://www.thermofisher.com/).
+* The original spectra were available for free from the [SpectraViewer portal](https://www.thermofisher.com/order/fluorescence-spectraviewer?ef_id=CjwKCAjwzOqKBhAWEiwArQGwaBb4KLS0-YxQRm5JSm7gn2EFWjisAtmFe8FniHkVYmyUJkXVVrPtiRoCJ_EQAvD_BwE:G:s&s_kwcid=AL!3652!3!546509333983!e!!g!!spectraviewer&cid=bid_pca_aup_r01_co_cp1359_pjt0000_bid00000_0se_gaw_bt_pur_con&gclid=CjwKCAjwzOqKBhAWEiwArQGwaBb4KLS0-YxQRm5JSm7gn2EFWjisAtmFe8FniHkVYmyUJkXVVrPtiRoCJ_EQAvD_BwE#!/) from [ThermoFisher Scientific](https://www.thermofisher.com/).
 
 ## Funding & Acknowledgment
 
