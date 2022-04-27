@@ -26,4 +26,4 @@ __Felix Schürmann__
 Co-director of the Blue Brain Project    
 [felix.schuermann@epfl.ch](felix.schuermann@epfl.ch) 
 
-Copyright (c) 2017 - 2021-2022 Blue Brain Project/EPFL
+Copyright (c) 2017-2022 Blue Brain Project/EPFL
